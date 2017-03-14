@@ -2,13 +2,13 @@ import os, sys, pygame
 from random import randint
 
 
-class Pad(pygame.sprite.Sprite):
+class Pad(pygamesssssssssssssssssss.sprite.Sprite):
     def __init__(self, pos=(0, 0)):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((12, 30)).convert()
         self.image.fill((255, 255, 255))
         self.rect = self.image.get_rect(center=pos)
-        self.max_speed = 5
+        self.max_speed = 5.0
         self.speed = 0
 
     def move_up(self):
@@ -61,7 +61,7 @@ class Score(pygame.sprite.Sprite):
         self.font = font
         self.pos = pos
         self.score = 0
-        self.image = self.font.render(str(self.score), 0, (255, 255, 255))
+##        self.image = self.font.render(str(self.score), 0, (255, 255, 255))
         self.rect = self.image.get_rect(center=self.pos)
 
     def score_up(self):
@@ -75,7 +75,7 @@ class Score(pygame.sprite.Sprite):
 def main():
     pygame.init()
 
-    size = width, height = 800, 600
+    size = width, height = 800,
     screen = pygame.display.set_mode(size)
     pygame.display.set_caption('Pong Pygame')
 
@@ -116,7 +116,7 @@ def main():
         pad_left, pad_right, ball, left_score, right_score)
 
     clock = pygame.time.Clock()
-    fps = 100
+    fps = 5
 
     pygame.key.set_repeat(1, 1000/fps)
 
@@ -139,8 +139,8 @@ def main():
                 pad_left.move_up()
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_s:
                 pad_left.move_down()
-            elif event.type == pygame.KEYDOWN and event.key == pygame.K_UP:
-                pad_right.move_up()
+##            elif event.type == pygame.KEYDOWN and event.key == pygame.K_UP:
+##                pad_right.move_up()
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_DOWN:
                 pad_right.move_down()
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
